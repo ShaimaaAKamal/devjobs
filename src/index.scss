@@ -39,3 +39,23 @@ html{
 .darkBtn:hover{
     background-color: $darkGray;
 }
+
+nav{
+    background-image: url('./assets/mobile/bg-pattern-header.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 0 2.5rem;
+    padding:1.5rem;
+}
+
+@media screen and (min-width:768px){
+    nav{
+        background-image: url('./assets/tablet/bg-pattern-header.svg');
+    }
+}
+
+@media screen and (min-width:992px){
+    nav{
+        background-image: url('./assets/desktop/bg-pattern-header.svg');
+    }
+}
