@@ -39,6 +39,14 @@ html{
 .darkBtn:hover{
     background-color: $darkGray;
 }
+.bgLight{
+    background-color: $lightGray;
+    color:$midNight
+}
+.bgDark{
+    background-color: $midNight;
+    color:$lightGray;
+}
 
 nav{
     background-image: url('./assets/mobile/bg-pattern-header.svg');
