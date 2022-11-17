@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+$violet:#5964E0;
+$lightViolet:#939BF4;
+$veryDarkBlue:#19202D;
+$midNight:#121721;
+$lightGray:#F4F6F8;
+$gray:#9DAEC2;
+$darkGray:#6E8098;
+$fontFamily:'Kumbh Sans';
+
+html{
+    font-family:$fontFamily, sans-serif;
+}
+
+.mainBtn{
+   background-color: $violet;
+   color:#fff;
+}
+
+.mainBtn:hover{
+    background-color: $lightViolet;
+}
+
+.lightBtn{
+    background-color: #EEEFFD;
+    color:$violet
+}
+
+.lightBtn:hover{
+   background-color: #C4C9F8;
+}
+
+.darkBtn{
+    background-color: $midNight;
+    color:#fff
+}
+
+.darkBtn:hover{
+    background-color: $darkGray;
+}
