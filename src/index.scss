@@ -75,8 +75,8 @@ nav{
             background-color:#E7E7E9;
             border:none;
             &:checked{
-                background-color: $violet;
-                color:#fff;
+                background-color: $violet !important;
+                color:#fff !important;
             }
             &:focus{
                 box-shadow: unset;
