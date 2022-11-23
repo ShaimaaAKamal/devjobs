@@ -55,6 +55,7 @@ html{
 
 .bgFilter{
     background-color: #19202D;
+    color:#C4C9F8;
 }
 nav{
     background-image: url('./assets/mobile/bg-pattern-header.svg');
@@ -65,20 +66,40 @@ nav{
 }
 
 .parent{
+    cursor: pointer !important;
      width:85%;
      margin: 0 auto;
      transform: translateY(-20px);
     .option{
+        .form-check-input{
+            background-color:#E7E7E9;
+            border:none;
+            &:checked{
+                background-color: $violet;
+                color:#fff;
+            }
+            &:focus{
+                box-shadow: unset;
+                color:#fff;
+            }
+        }
         .input-group-text{
             background-color: transparent;
             border:none;
         }
         .form-control{
+            cursor: pointer;
+            color:inherit;
             border:none;
             padding:.7rem 0 1.1rem 1rem;
             background-color: transparent;
             &::placeholder{
                 font-size:.8rem;
+            }
+            &:focus{
+                box-shadow: unset !important;
+                // outline: none;
+                border:none !important;
             }
             
         }

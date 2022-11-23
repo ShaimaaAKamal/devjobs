@@ -1,6 +1,8 @@
 import React from 'react';
 
+
 export default function Option() {
+  
   return (
      <div className='parent'>
         <div className='container bg-white option px-0 '>
@@ -32,7 +34,7 @@ export default function Option() {
 
               </div>
               </div>
-              <div className="col-md-4 col-lg-3 bordergray d-none d-md-block">
+              <div className="col-md-4 col-lg-3 px-2 bordergray d-none d-md-block">
                     <div className="input-group ">
                         <span className="input-group-text ps-3 pe-1  rounded-0" id="basic-addon1">
                         <svg width="17" height="24" xmlns="http://www.w3.org/2000/svg">
@@ -42,10 +44,10 @@ export default function Option() {
                         <input type="text" className="form-control ps-2 rounded-0 form-control-lg" placeholder="Filter by location…" id='locationKey' aria-label="Filter Key" aria-describedby="basic-addon1"/>
                     </div>
               </div>
-              <div className="col-md-4 col-lg-4 d-none d-md-block">
-                  <div className='px-3 d-flex justify-content-between align-items-center h-100 Filter'>
+              <div className="col-md-4 col-lg-4 ps-2 d-none d-md-block">
+                  <div className='px-3 d-flex justify-content-between align-items-center h-100 '>
                         <div className="form-check">
-                              <input className="form-check-input" type="checkbox" value="" id="checkFull"/>
+                              <input className="form-check-input" type="checkbox" value="fullTime" id="checkFull"/>
                               <label className="form-check-label  d-none d-lg-inline-block" htmlFor="checkFull">
                               Full Time Only                    
                               </label>
