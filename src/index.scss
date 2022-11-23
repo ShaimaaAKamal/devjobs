@@ -14,30 +14,29 @@ html{
 }
 
 .mainBtn{
-   background-color: $violet;
-   color:#fff;
+   background-color: $violet !important;
+   color:#fff !important;
 }
-
 .mainBtn:hover{
-    background-color: $lightViolet;
+    background-color: $lightViolet !important;
 }
 
 .lightBtn{
-    background-color: #EEEFFD;
-    color:$violet
+    background-color: #EEEFFD !important;
+    color:$violet !important
 }
 
 .lightBtn:hover{
-   background-color: #C4C9F8;
+   background-color: #C4C9F8 !important;
 }
 
 .darkBtn{
-    background-color: $midNight;
+    background-color: $midNight !important;
     color:#fff
 }
 
 .darkBtn:hover{
-    background-color: $darkGray;
+    background-color: $darkGray !important;
 }
 .bgLight{
     background-color: $lightGray;
@@ -55,6 +54,28 @@ nav{
     border-radius: 0 0 0 2.5rem;
     padding:1.5rem;
 }
+
+.parent{
+     width:85%;
+     margin: 0 auto;
+     transform: translateY(-20px);
+    .option{
+        .input-group-text{
+            background-color: transparent;
+            border:none;
+        }
+        .form-control{
+            border:none;
+            padding:.7rem 0 1.1rem 1rem;
+            &::placeholder{
+                font-size:.8rem;
+            }
+            
+        }
+    }
+}
+
+
 
 @media screen and (min-width:768px){
     nav{
