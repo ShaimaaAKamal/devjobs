@@ -47,6 +47,15 @@ html{
     color:$lightGray;
 }
 
+.bordergray{
+    border:.5px solid #6E8098 !important;
+    border-top:none !important;
+    border-bottom: none !important;
+}
+
+.bgFilter{
+    background-color: #19202D;
+}
 nav{
     background-image: url('./assets/mobile/bg-pattern-header.svg');
     background-repeat: no-repeat;
@@ -67,6 +76,7 @@ nav{
         .form-control{
             border:none;
             padding:.7rem 0 1.1rem 1rem;
+            background-color: transparent;
             &::placeholder{
                 font-size:.8rem;
             }
