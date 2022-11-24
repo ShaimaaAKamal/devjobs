@@ -109,8 +109,9 @@ nav{
             cursor: pointer;
             color:inherit;
             border:none;
-            padding:.7rem 0 1.1rem 1rem;
+            padding:.9rem 0 1.1rem 1rem;
             background-color: transparent;
+            font-size:.9rem;
             &::placeholder{
                 font-size:.8rem;
             }
