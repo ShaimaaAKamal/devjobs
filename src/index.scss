@@ -129,10 +129,12 @@ nav{
         top:-45px;
         left:50%;
         transform: translateX(-50%);
-     }
-
-    
+     }    
 }
+
+.ApplyBtn{
+    width:100%;
+ }
 
 
 
@@ -142,6 +144,9 @@ nav{
         border-radius: 0 0 0 2.5rem;
         padding:1.8rem 1.5rem;
     }
+    .ApplyBtn{
+        width:auto;
+     }
 }
 
 @media screen and (min-width:992px){
