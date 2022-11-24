@@ -4,7 +4,7 @@ export default function JobHeader({job}) {
     const [logo,setLogo]=useState(null);
     useEffect(()=>{
        async function getLogo(){
-        const logImage=await import(`./../../assets/logos/scoot.svg`);
+        const logImage=await import(`../../assets${job.logo}`);
         setLogo(logImage.default)
        }
        getLogo();
