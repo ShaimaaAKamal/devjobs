@@ -3,8 +3,8 @@ import JobCard from '../JobCardComponent/JobCard';
 
 export default function Jobs({jobs}) {
   return (
-    <div className='container py-5'>
-      <div className="row g-4"> 
+    <div className='container py-5 my-5'>
+      <div className="row g-5"> 
       
          {
           jobs.map((job,index)=> 
