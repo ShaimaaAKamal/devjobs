@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from '../Layout/Layout';
 import Home from '../Home/Home'
 import NotFound from "../NotFound/NotFound";
+import JobDetails from "../JobDetailsComponent/JobDetails";
 import { useEffect, useState } from 'react';
 import modeChange from '../../js/script.js';
 import data from '../../data.json'
@@ -12,7 +13,8 @@ function App() {
 },[]);
   const routes=createBrowserRouter([{
     path:'',element:<Layout/>,errorElement:<NotFound/>,children:[
-      {index:true,element:<Home jobs={jobs}/>}
+      {index:true,element:<Home jobs={jobs}/>},
+      {path:'job/:id',element:<JobDetails/>}
     ]
   }])
   return (
