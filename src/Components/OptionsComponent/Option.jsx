@@ -5,7 +5,7 @@ export default function Option() {
   
   return (
     //  <div className='parent'>
-        <div className='container bg-white option px-0 '>
+        <div className='container bg-white option px-0 lightSite'>
             <div className="row g-0">
             <div className="col-md-4 col-lg-5  d-md-none">
               <div className="input-group ">

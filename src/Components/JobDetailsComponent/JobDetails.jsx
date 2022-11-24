@@ -5,6 +5,8 @@ export default function JobDetails({id}) {
   const location=useLocation()
   const jobDetails=location.state.details;
   return (
-    <div>JobDetails</div>
+    <div>
+      
+    </div>
   )
 }
