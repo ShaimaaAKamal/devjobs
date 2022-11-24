@@ -66,6 +66,8 @@ useEffect(() => {
     return displayed
   }
   const handleSearch=()=>{
+    const filtersmall=document.querySelector('.filterSmall');
+    if(!filtersmall.classList.contains('d-none')) filtersmall.classList.add('d-none')
     const titleElements=document.querySelectorAll('.titleKey');
     const title =Array.from(titleElements).find(element => element.value !== '')
     const location=document.querySelector('#locationKey').value.trim();
@@ -82,9 +84,21 @@ useEffect(() => {
     }
   }
 
+  const handleFilter=(e)=>{
+    const filtersmall=document.querySelector('.filterSmall');
+    filtersmall.classList.remove('d-none');
+  }
+  const removeFilter=(e)=>{
+    const filtersmall=document.querySelector('.filterSmall');
+    filtersmall.addEventListener('click',function(e){
+      if(e.target === filtersmall  )
+          filtersmall.classList.add('d-none');
+    })
+  }
+
   return (
     <div className='parent'>
-      <Option handleSearch={handleSearch}/>
+      <Option handleSearch={handleSearch} handleFilter={handleFilter} removeFilter={removeFilter}/>
       {
         (displayJobs.length === 0)?<div className='bg-white lightSite p-3 my-5 textGray text-center'>
                                       There are No Available Jobs 
