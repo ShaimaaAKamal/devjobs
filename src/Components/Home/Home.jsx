@@ -33,7 +33,7 @@ useEffect(() => {
    }
   }
 
-  const getSearchData=(location,fullTime,title)=>{
+  const getSearchData=(location,fullTime,title,displayed)=>{
     if(location && fullTime && title){
       displayed=jobs.filter(job =>  (job['location'].toLowerCase() === location.toLowerCase()
        && job['contract']==="Full Time" 
@@ -62,6 +62,8 @@ useEffect(() => {
     else if(!location && !fullTime && !title){
       displayed=jobs
     }
+
+    return displayed
   }
   const handleSearch=()=>{
     const titleElements=document.querySelectorAll('.titleKey');
@@ -69,7 +71,7 @@ useEffect(() => {
     const location=document.querySelector('#locationKey').value.trim();
     const fullTime=document.querySelector('#checkFull').checked;
     let displayed=[];
-    getSearchData(location,fullTime,title)
+    displayed=getSearchData(location,fullTime,title,displayed)
     if(index.current >= displayed.length) 
      {setMore(false) ;
       setJobs(displayed);
