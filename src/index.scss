@@ -13,6 +13,10 @@ html{
     font-family:$fontFamily, sans-serif;
 }
 
+.textSite{
+    color:$violet;
+}
+
 .mainBtn{
    background-color: $violet !important;
    color:#fff !important;
@@ -56,6 +60,9 @@ html{
 .bgFilter{
     background-color: #19202D;
     color:#C4C9F8;
+}
+.fs-7{
+    font-size: .7rem;
 }
 nav{
     background-image: url('./assets/mobile/bg-pattern-header.svg');
