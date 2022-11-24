@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-
 export default function JobCard({job}) {
   const navigate=useNavigate()
   const [companyLogo,setCompanyLogo]=useState(null);
   useEffect(()=>{
     async function getLogo(){
-       const logoPath="./../."+job.logo;
-       const logo= await import('./../../assets/logos/scoot.svg');
+       const logo=  await import(`../../assets${job.logo}`)
           setCompanyLogo(logo.default);
     }
      getLogo();
@@ -18,8 +16,9 @@ export default function JobCard({job}) {
   }
   return (
      <div className='position-relative '>
-       <span style={{backgroundColor:`${job.logoBackground}`}} className='d-inline-block p-2 py-3 rounded-2 position-absolute translate-middle-y ms-5'>
+       <span style={{backgroundColor:`${job.logoBackground}`}} className='cardLogo  rounded-2 position-absolute translate-middle-y ms-5'>
             <img src={companyLogo} alt={job.company}/>
+            {/* {companyLogo} */}
        </span>
         <div className='bg-white  p-4 rounded-3 lightSite'>
             <div className='fs-7 text-muted mt-3'>
