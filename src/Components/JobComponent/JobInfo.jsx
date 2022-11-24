@@ -13,7 +13,7 @@ export default function JobInfo({job}) {
                   <h4 className='py-2 mb-1'>{job.position}</h4>
                   <div className='fs-7 textSite fw-semibold'><span>{job.location}</span></div>
               </div>
-              <button className='btn mainBtn px-4'>Apply Now</button>
+              <a href={job.apply} className='btn mainBtn px-4'>Apply Now</a>
          </div>
          <p className='textGray small fw-light pb-3 pt-md-3 pt-4 mt-2 mt-md-0 '>{job.description}</p>
          <h5>Requirements</h5>
