@@ -68,15 +68,14 @@ nav{
     background-image: url('./assets/mobile/bg-pattern-header.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 0 0 0 2.5rem;
-    padding:1.5rem;
+    padding:2.3rem 1.5rem;
 }
 
 .parent{
     cursor: pointer !important;
      width:85%;
      margin: 0 auto;
-     transform: translateY(-20px);
+     transform: translateY(-25px);
     .option{
         .form-check-input{
             background-color:#E7E7E9;
@@ -121,11 +120,17 @@ nav{
 @media screen and (min-width:768px){
     nav{
         background-image: url('./assets/tablet/bg-pattern-header.svg');
+        border-radius: 0 0 0 2.5rem;
+        padding:1.8rem 1.5rem;
     }
 }
 
 @media screen and (min-width:992px){
     nav{
         background-image: url('./assets/desktop/bg-pattern-header.svg');
+        padding:1.5rem;
+    }
+    .JobheaderWidth{
+       width:60%; 
     }
 }
