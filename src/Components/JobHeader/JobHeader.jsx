@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 export default function JobHeader({job,logo}) {
   return (
     <div className='mx-auto JobheaderWidth'>
-        <div className='row bg-white gx-0 rounded-1 '>
+        <div className='row bg-white gx-0 rounded-1 lightSite '>
                 <div className='col-md-2 col-lg-2 d-none d-md-block'>
                 <div className='w-100 h-100 d-flex justify-content-center align-items-center' style={{backgroundColor:`${job.logoBackground}`}}>
                     <img src={logo} alt={job.company} />
