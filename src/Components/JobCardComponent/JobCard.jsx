@@ -13,15 +13,15 @@ export default function JobCard({job}) {
      getLogo();
   },[])
 
-  const showJob=(jobDetails)=>{
-    navigate(`/job/${jobDetails}`);
+  const showJob=(job)=>{
+    navigate(`/job/${job.id}`,{state:{details:job}});
   }
   return (
      <div className='position-relative '>
        <span style={{backgroundColor:`${job.logoBackground}`}} className='d-inline-block p-2 py-3 rounded-2 position-absolute translate-middle-y ms-5'>
             <img src={companyLogo} alt={job.company}/>
        </span>
-        <div className='bg-white  p-4 rounded-3'>
+        <div className='bg-white  p-4 rounded-3 lightSite'>
             <div className='fs-7 text-muted mt-3'>
               <span>{job.postedAt}</span>
               <span className='px-2'>.</span>
