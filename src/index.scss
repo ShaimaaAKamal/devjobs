@@ -113,6 +113,13 @@ nav{
     .jobPosition:hover{
          color:$darkGray !important;
      }
+     .logoMove{
+        top:-45px;
+        left:50%;
+        transform: translateX(-50%);
+     }
+
+    
 }
 
 
