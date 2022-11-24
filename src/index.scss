@@ -64,7 +64,7 @@ html{
 }
 
 .bordergray{
-    border:.5px solid #6E8098 !important;
+    border:.2px solid $darkGray !important;
     border-top:none !important;
     border-bottom: none !important;
 }
@@ -116,7 +116,6 @@ nav{
             }
             &:focus{
                 box-shadow: unset !important;
-                // outline: none;
                 border:none !important;
             }
             
