@@ -18,6 +18,11 @@ export default function Home({jobs,mode,setMode}) {
    }
 },[]);
 
+useEffect(() => {
+  localStorage.setItem('page','home');
+  modeChange(mode,setMode);
+},[displayJobs]);
+
   const loadMore=()=>{
     index.current=index.current+8;
     if(index.current <= jobs.length)
