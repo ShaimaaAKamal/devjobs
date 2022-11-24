@@ -14,7 +14,7 @@ function App() {
   const routes=createBrowserRouter([{
     path:'',element:<Layout/>,errorElement:<NotFound/>,children:[
       {index:true,element:<Home jobs={jobs}/>},
-      {path:'job/:id',element:<JobDetails/>}
+      {path:'job/:details',element:<JobDetails/>}
     ]
   }])
   return (

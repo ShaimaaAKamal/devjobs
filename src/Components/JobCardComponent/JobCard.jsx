@@ -13,8 +13,8 @@ export default function JobCard({job}) {
      getLogo();
   },[])
 
-  const showJob=(jobId)=>{
-    navigate(`/job/${jobId}`);
+  const showJob=(jobDetails)=>{
+    navigate(`/job/${jobDetails}`);
   }
   return (
      <div className='position-relative '>
@@ -27,7 +27,7 @@ export default function JobCard({job}) {
               <span className='px-2'>.</span>
               <span>{job.contract}</span>
             </div>
-            <h6 className='py-2 mb-1 jobPosition' onClick={()=>showJob(job.id)}>{job.position}</h6>
+            <h6 className='py-2 mb-1 jobPosition' onClick={()=>showJob(job)}>{job.position}</h6>
             <div className='fs-7 text-muted'><span>{job.company}</span></div>
             <br/><br/>
             <div className='fs-7 textSite fw-semibold'><span>{job.location}</span></div>
