@@ -32,13 +32,70 @@ useEffect(() => {
       setMore(false);
    }
   }
+
+  const getSearchData=(location,fullTime,title)=>{
+    if(location && fullTime && title){
+      displayed=jobs.filter(job =>  (job['location'].toLowerCase() === location.toLowerCase()
+       && job['contract']==="Full Time" 
+       && (job['company'].toLowerCase() === title.value.trim().toLowerCase() ||  job['position'].toLowerCase === title.value.trim().toLowerCase())))
+    }
+    else if(!location && fullTime && title){
+      displayed=jobs.filter(job =>  ( job['contract']==="Full Time" 
+      && (job['company'].toLowerCase() === title.value.trim().toLowerCase() ||  job['position'].toLowerCase === title.value.trim().toLowerCase())))
+    }
+    else if(!location && fullTime && !title){
+      displayed=jobs.filter(job =>  ( job['contract']==="Full Time" ))
+    }
+    else if(location && fullTime && !title){
+      displayed=jobs.filter(job =>  ( job['contract']==="Full Time" && job['location'].toLowerCase() === location.toLowerCase() ))
+    }
+    else if(location && !fullTime && !title){
+      displayed=jobs.filter(job =>  (job['location'].toLowerCase() === location.toLowerCase() ))
+    }
+    else if(location && !fullTime && title){
+      displayed=jobs.filter(job =>  (job['location'].toLowerCase() === location.toLowerCase()
+       && (job['company'].toLowerCase() === title.value.trim().toLowerCase() ||  job['position'].toLowerCase === title.value.trim().toLowerCase())))
+    }
+    else if(!location && !fullTime && title){
+      displayed=jobs.filter(job =>  ((job['company'].toLowerCase() === title.value.trim().toLowerCase() ||  job['position'].toLowerCase() === title.value.trim().toLowerCase())))
+    }
+    else if(!location && !fullTime && !title){
+      displayed=jobs
+    }
+  }
+  const handleSearch=()=>{
+    const titleElements=document.querySelectorAll('.titleKey');
+    const title =Array.from(titleElements).find(element => element.value !== '')
+    const location=document.querySelector('#locationKey').value.trim();
+    const fullTime=document.querySelector('#checkFull').checked;
+    let displayed=[];
+    getSearchData(location,fullTime,title)
+    if(index.current >= displayed.length) 
+     {setMore(false) ;
+      setJobs(displayed);
+    }
+    else {
+       setJobs(displayed.slice(0,index.current));
+      setMore(true);
+    }
+  }
+
   return (
     <div className='parent'>
-      <Option/>
-      <Jobs jobs={displayJobs}/>
-      <div className='text-center'>
-        {more && <button className='btn mainBtn' onClick={loadMore}>Load More</button>}
-      </div>
+      <Option handleSearch={handleSearch}/>
+      {
+        (displayJobs.length === 0)?<div className='bg-white lightSite p-3 my-5 textGray text-center'>
+                                      There are No Available Jobs 
+                                </div>: <>
+                                <Jobs jobs={displayJobs}/>
+                                <div className='text-center'>
+                                  {more && <button className='btn mainBtn' onClick={loadMore}>Load More</button>}
+                                </div>
+                                        </>
+
+      }
+      
+     
     </div>
   )
 }
