@@ -6,10 +6,11 @@ import JobInfo from '../JobComponent/JobInfo';
 export default function JobDetails() {
   const location=useLocation()
   const jobDetails=location.state.details;
+  const logo=location.state.logo
   return (
     <>
         <div className='parent'>
-          <JobHeader job={jobDetails}/>
+          <JobHeader job={jobDetails} logo={logo}/>
           <JobInfo job={jobDetails}/>   
         </div>
         <footer className='bg-white shadow py-3'>

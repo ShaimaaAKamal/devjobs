@@ -1,15 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export default function JobHeader({job}) {
-    const [logo,setLogo]=useState(null);
-    useEffect(()=>{
-       async function getLogo(){
-        const logImage=await import(`../../assets${job.logo}`);
-        setLogo(logImage.default)
-       }
-       getLogo();
-    },[])
-
+export default function JobHeader({job,logo}) {
   return (
     <div className='mx-auto JobheaderWidth'>
         <div className='row bg-white gx-0 rounded-1 '>
@@ -20,7 +11,7 @@ export default function JobHeader({job}) {
                 </div>
                 <div className='col-md-10 col-lg-10 px-md-3 py-4'>
                        <div className='position-relative'>
-                            <span style={{backgroundColor:`${job.logoBackground}`}} className='logoMove d-inline-block d-md-none p-2 py-3 rounded-2 position-absolute'>
+                            <span style={{backgroundColor:`${job.logoBackground}`}} className='logoMove  d-md-none cardLogo rounded-2 position-absolute'>
                                 <img src={logo} alt={job.company}/>
                             </span>
                             <div className='d-flex flex-column flex-md-row justify-content-md-between align-items-center pt-4 pt-md-0 '>
