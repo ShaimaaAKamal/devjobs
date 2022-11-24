@@ -4,7 +4,6 @@ export default function modeChange(){
     const light=document.querySelector('.light');
     const dark=document.querySelector('.dark');
     const Elements=document.querySelectorAll('.lightSite');
-    console.log(Elements);
     const checkFull=document.querySelector('#checkFull');
     dark.addEventListener('click',function(){
         light.classList.remove('d-none');
