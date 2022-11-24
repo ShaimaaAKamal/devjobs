@@ -3,7 +3,7 @@ import JobCard from '../JobCardComponent/JobCard';
 
 export default function Jobs({jobs}) {
   return (
-    <div className='container py-5 my-5'>
+    <div className='container py-5 mt-5'>
       <div className="row g-5"> 
       
          {
