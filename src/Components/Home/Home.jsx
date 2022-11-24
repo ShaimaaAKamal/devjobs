@@ -97,7 +97,7 @@ useEffect(() => {
   }
 
   return (
-    <div className='parent'>
+    <div className='parent mb-5'>
       <Option handleSearch={handleSearch} handleFilter={handleFilter} removeFilter={removeFilter}/>
       {
         (displayJobs.length === 0)?<div className='bg-white lightSite p-3 my-5 textGray text-center'>
