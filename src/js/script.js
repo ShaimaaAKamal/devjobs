@@ -5,6 +5,7 @@ export default function modeChange(mode,setMode){
     const dark=document.querySelector('.dark');
     const Elements=document.querySelectorAll('.lightSite');
     const checkFull=document.querySelector('#checkFull');
+    const filterSmall=document.querySelector('.filterSmall')
     const page=localStorage.getItem('page')
     const setLight=()=>{
         setMode('light');
@@ -16,7 +17,7 @@ export default function modeChange(mode,setMode){
             element.classList.add('bg-white');
             element.classList.remove('bgFilter');
         });
-        if(page === 'home') checkFull.style.backgroundColor='#E7E7E9'
+        if(page === 'home') {checkFull.style.backgroundColor='#E7E7E9';filterSmall.style.backgroundColor='rgba(0,0,0,.3)'}
     }
 
     const setDark=()=>{
@@ -29,7 +30,7 @@ export default function modeChange(mode,setMode){
             element.classList.remove('bg-white');
             element.classList.add('bgFilter');
         });
-        if(page === 'home')  checkFull.style.backgroundColor='#303744'
+        if(page === 'home')  {checkFull.style.backgroundColor='#303744' ;filterSmall.style.backgroundColor='rgba(255,255,255,.3)'}
 
     }
 
