@@ -59,19 +59,15 @@ html{
     color:$midNight
 }
 .bgDark{
-    background-color: $midNight;
+    background-color: $midNight ;
     color:$lightGray;
 }
 
-.bordergray{
-    border:.2px solid $darkGray !important;
-    border-top:none !important;
-    border-bottom: none !important;
-}
+
 
 .bgFilter{
-    background-color: #19202D;
-    color:#C4C9F8;
+    background-color: #19202D !important;
+    color:#C4C9F8 !important;
 }
 .fs-7{
     font-size: .7rem;
@@ -87,7 +83,8 @@ nav{
     cursor: pointer !important;
      width:85%;
      margin: 0 auto;
-     transform: translateY(-25px);
+     margin-top:-25px;
+    //  transform: translateY(-25px);
     .option{
         .form-check-input{
             background-color:#E7E7E9;
@@ -143,6 +140,30 @@ nav{
     align-items: center;
     justify-content: center;
 }
+.filterSmall{
+    padding:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: #12172130;
+    z-index: 99999;
+    top:0;
+    left:0;
+    .row{
+        width:75%;
+        margin:0 auto;
+        padding:2rem;
+        border-radius: .5rem;
+        background-color: white;
+        .bordergray{
+            border:none;
+            border-bottom:.2px solid $darkGray !important;
+        }
+    }
+}
 
 @media screen and (min-width:768px){
     nav{
@@ -153,6 +174,26 @@ nav{
     .ApplyBtn{
         width:auto;
      }
+     .filterSmall{
+        padding: 0;
+        color:#121721;
+        display: block;
+        height:auto;
+        width: auto;
+        position: static;
+        background-color: transparent;
+        .row{
+            padding:0;
+            border-radius:0;
+            background-color: transparent;
+            width: auto;
+            .bordergray{
+                border:.2px solid $darkGray !important;
+                border-top:none !important;
+                border-bottom: none !important;
+            }
+        }
+    }
 }
 
 @media screen and (min-width:992px){
