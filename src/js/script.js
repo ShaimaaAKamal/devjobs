@@ -9,6 +9,7 @@ export default function modeChange(mode,setMode){
     const page=localStorage.getItem('page')
     const setLight=()=>{
         setMode('light');
+        localStorage.setItem('mode','light')
         light.classList.remove('d-none');
         dark.classList.add('d-none');
         document.body.classList.add('bgLight');
@@ -21,6 +22,7 @@ export default function modeChange(mode,setMode){
     }
 
     const setDark=()=>{
+        localStorage.setItem('mode','dark')
         setMode('dark');
         dark.classList.remove('d-none');
         light.classList.add('d-none');
