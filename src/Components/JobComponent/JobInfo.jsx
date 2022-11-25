@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function JobInfo({job}) {
   return (
      <div className='mx-auto JobheaderWidth my-5 '>
-          <Link to ='/' className='text-decoration-none textGray small fw-light ps-2'><i class="fa-solid fa-chevron-left me-2"></i><span>Back to Jobs</span></Link>
+          <Link to ='/' className='text-decoration-none textGray small fw-light ps-2'><i className="fa-solid fa-chevron-left me-2"></i><span>Back to Jobs</span></Link>
           <div className='p-4 px-5 bg-white rounded-2 mt-2 lightSite'> 
               <div className='d-flex flex-column flex-md-row justify-content-md-between align-items-md-center'>
                     <div className='mb-5 mb-md-0'>
